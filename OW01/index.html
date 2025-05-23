@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT Shipping - Global Logistics Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="">
+    <style>
+        /* Loading Animation Styles */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .spinner {
+            width: 70px;
+            height: 70px;
+            position: relative;
+        }
+        
+        .spinner:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top-color: #3498db;
+            border-bottom-color: #f39c12;
+            animation: spinner 1.5s linear infinite;
+        }
+        
+        .spinner:after {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-left-color: #e74c3c;
+            border-right-color: #2ecc71;
+            animation: spinner 1s linear infinite reverse;
+        }
+        
+        .loading-text {
+            position: absolute;
+            bottom: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        @keyframes spinner {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Hide the body content initially */
+        body > *:not(#loading-overlay) {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        
+        /* Show the body content when loaded */
+        body.loaded > *:not(#loading-overlay) {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading GT Shipping...</div>
+    </div>
+
+    <div class="x1y2z3"></div> <div class="z9y8x7">
+    <!-- Background Pattern -->
+    <div class="bg-pattern"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-rocket"></i>
+                    GT Shipping
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-choose">Why Choose Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Next-Gen Global Shipping Solutions</h1>
+                    <p>Experience the future of logistics with our cutting-edge technology, lightning-fast delivery, and unmatched reliability. We connect businesses worldwide with seamless shipping solutions.</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explore Services
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-icon blue">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="card-title">Air Express</div>
+                        <div class="card-text">24-48 hour delivery worldwide</div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="card-icon orange">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <div class="card-title">Ocean Freight</div>
+                        <div class="card-text">Cost-effective bulk shipping</div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="card-icon purple">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="card-title">Ground Transport</div>
+                        <div class="card-text">Reliable local & regional delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-subtitle">Comprehensive logistics solutions powered by advanced technology and global expertise</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="service-title">Express Air Freight</h3>
+                    <p class="service-description">Ultra-fast air freight services with real-time tracking, priority handling, and guaranteed delivery times for your most critical shipments.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="service-title">Ocean Freight Solutions</h3>
+                    <p class="service-description">Cost-effective ocean freight with flexible container options, global port coverage, and comprehensive cargo insurance for large-scale shipments.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="service-title">Ground Transportation</h3>
+                    <p class="service-description">Reliable ground transport with GPS tracking, specialized vehicles, and last-mile delivery solutions for local and regional distribution.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <div class="why-choose-content">
+                <div>
+                    <h2 class="section-title">Why Choose GT Shipping?</h2>
+                    <p class="section-subtitle">We combine cutting-edge technology with human expertise to deliver exceptional logistics solutions.</p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Lightning Fast Delivery</h3>
+                                <p>Our optimized routes and priority handling ensure your packages reach their destination in record time.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>100% Secure & Insured</h3>
+                                <p>Every shipment is fully insured and handled with the highest security standards for complete peace of mind.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-satellite"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Real-Time Tracking</h3>
+                                <p>Advanced GPS and IoT technology provides precise, real-time location updates throughout the shipping process.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>24/7 Support</h3>
+                                <p>Our dedicated customer support team is available around the clock to assist with any shipping needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">On-Time Delivery</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10M+</div>
+                        <div class="stat-label">Packages Delivered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Customer Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Coverage Section -->
+    <section class="global-coverage">
+        <div class="container">
+            <div class="coverage-visual">
+                <div class="coverage-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h2 class="coverage-title">Global Network Coverage</h2>
+                <p class="coverage-text">Our extensive network spans across 200+ countries and territories, ensuring your packages reach every corner of the world with speed and reliability.</p>
+                <a href="#contact" class="btn btn-primary">Expand Your Reach</a>
+                <div class="countries-list">
+                    <span class="country-tag">India</span>
+                    <span class="country-tag">Russia</span>
+                    <span class="country-tag">Lebanon</span>
+                    <span class="country-tag">Japan</span>
+                    <span class="country-tag">Australia</span>
+                    <span class="country-tag">Canada</span>
+                    <span class="country-tag">France</span>
+                    <span class="country-tag">Brazil</span>
+                    <span class="country-tag">United States</span>
+                    <span class="country-tag">Germany</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by thousands of businesses worldwide for reliable shipping solutions</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">GT Shipping has revolutionized our logistics operations. Their technology platform and customer service are absolutely outstanding. We've seen a 40% improvement in delivery times.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+  <img src="https://groww-social.github.io/OW01/images/user1.jpeg" alt="Author Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
+</div>
+                        <div class="author-info">
+                            <h4>Ali fadel</h4>
+                            <p>CEO, TechFlow Industries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The real-time tracking and proactive communication have made GT Shipping our go-to logistics partner. They handle our international shipments flawlessly every time.</p>
+                    <div class="testimonial-author">
+                         <div class="author-avatar">
+  <img src="https://groww-social.github.io/OW01/images/user2.jpeg" alt="Author Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
+</div>
+                        <div class="author-info">
+                            <h4>Mhmd hamieh</h4>
+                            <p>Operations Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As an e-commerce business, reliable shipping is crucial. GT Shipping's speed and reliability have helped us maintain a 99% customer satisfaction rate.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+  <img src="https://groww-social.github.io/OW01/images/user3.jpeg" alt="Author Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
+</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Founder, E-Commerce Plus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to transform your shipping experience? Let's discuss your logistics needs</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Global Headquarters</h3>
+                            <p>GT Shipping<br>beirut, lebanon</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Support</h3>
+                            <p>+961 03 429 870<br>Available 24/7</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Support</h3>
+                            <p>Zinxgtx@gmail.com<br>Response within 1 hour</p>
+                        </div>
+                    </div>
+                </div>
+             <div class="contact-form" id="contact-form">
+  <form id="contactForm">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company</label>
+      <input type="text" id="company" placeholder="Enter your company name" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Tell us about your shipping needs" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-paper-plane"></i>
+      Send Message
+    </button>
+  </form>
+</div>
+<div id="submitted-message" style="display:none;">           
+  <p>You have already submitted the form.</p>  
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GT Shipping</h3>
+                    <p>Leading the future of global logistics with innovative technology and unmatched reliability. Your trusted partner for worldwide shipping solutions.</p>
+                    <div class="social-links">
+                        <a href="http://www.tiktok.com/@gt.shipping1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <div class="footer-links">
+                        <a href="#">Express Air Freight</a>
+                        <a href="#">Ocean Freight</a>
+                        <a href="#">Ground Transportation</a>
+                        <a href="#">Warehousing</a>
+                        <a href="#">Supply Chain Solutions</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <div class="footer-links">
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">News & Media</a>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Investor Relations</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <div class="footer-links">
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Support</a>
+                        <a href="#">Shipping Guide</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+           <div class="footer-bottom">
+    <p>&copy; 2025 GT Shipping. All rights reserved. Delivering excellence worldwide.</p>
+    <p style="cursor: pointer;" onclick="window.location.href='https://t.me/landingpageforsmmpanel'">Designed by Groww Social</p>
+</div>
+        </div>
+    </footer>    
+    <script src="https://groww-social.github.io/OW01/js/script.js"></script>
+    <script src="https://groww-social.github.io/OW01/js/Jquery.js"></script>
+    <script src="https://groww-social.github.io/OW01/js/ajx.js"></script>
+    
+    <!-- Loading Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all images on the page
+            const images = document.querySelectorAll('img');
+            const links = document.querySelectorAll('link[rel="stylesheet"]');
+            const scripts = document.querySelectorAll('script[src]');
+            
+            let loadedItems = 0;
+            const totalItems = images.length + links.length + scripts.length;
+            
+            // Function to check if everything is loaded
+            function checkAllLoaded() {
+                loadedItems++;
+                if (loadedItems >= totalItems) {
+                    // Everything is loaded, hide the loading overlay
+                    setTimeout(function() {
+                        document.body.classList.add('loaded');
+                        const loadingOverlay = document.getElementById('loading-overlay');
+                        loadingOverlay.style.opacity = '0';
+                        setTimeout(function() {
+                            loadingOverlay.style.display = 'none';
+                        }, 500);
+                    }, 800); // Add a small delay for better user experience
+                }
+            }
+            
+            // Check if images are loaded
+            if (images.length > 0) {
+                images.forEach(function(img) {
+                    if (img.complete) {
+                        checkAllLoaded();
+                    } else {
+                        img.addEventListener('load', checkAllLoaded);
+                        img.addEventListener('error', checkAllLoaded); // Count error as loaded
+                    }
+                });
+            }
+            
+            // Check if stylesheets are loaded
+            if (links.length > 0) {
+                links.forEach(function(link) {
+                    if (link.sheet) {
+                        checkAllLoaded();
+                    } else {
+                        link.addEventListener('load', checkAllLoaded);
+                        link.addEventListener('error', checkAllLoaded);
+                    }
+                });
+            }
+            
+            // Check if scripts are loaded
+            if (scripts.length > 0) {
+                scripts.forEach(function(script) {
+                    if (script.complete) {
+                        checkAllLoaded();
+                    } else {
+                        script.addEventListener('load', checkAllLoaded);
+                        script.addEventListener('error', checkAllLoaded);
+                    }
+                });
+            }
+            
+            // Fallback in case something doesn't trigger properly
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.body.classList.add('loaded');
+                    const loadingOverlay = document.getElementById('loading-overlay');
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(function() {
+                        loadingOverlay.style.display = 'none';
+                    }, 500);
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
